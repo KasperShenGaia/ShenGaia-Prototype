@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ShenGaia · Partnerskabsoplæg</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <a href="#om" class="brand"><img src="assets/logo.png" alt="ShenGaia - Global impact, collective growth"></a>
+    <nav>
+      <a href="#om">Om os</a>
+      <a href="#kredslob">Kredsløbet</a>
+      <a href="#samarbejde">Samarbejde</a>
+      <a href="#dokumentation">Dokumentation</a>
+      <a href="#vurdering" class="nav-cta">Din vurdering</a>
+    </nav>
+  </div>
+</header>
+
+<div class="notice">Prototype til et bachelorprojekt. Modellen, procenterne og alle tal er under udvikling, og dataene i eksemplet er fiktive.</div>
+
+<main>
+
+  <!-- 1. Om ShenGaia -->
+  <section id="om" class="hero">
+    <div class="wrap">
+      <p class="kicker">Partnerskabsoplæg</p>
+      <h1>Biokul der gør jorden bedre og binder CO₂</h1>
+      <p class="lead">ShenGaia er en dansk-nigeriansk virksomhed, der laver biokul og biokulbaseret gødning af restprodukter fra palmeolieproduktionen i Nigeria. Gødningen forbedrer landmændenes jord, og kulstoffet der bindes i jorden dokumenteres og sælges som CO₂-kreditter til danske virksomheder.</p>
+      <div class="facts">
+        <div class="fact"><span class="fact-n">1</span><h3>Restprodukt bliver ressource</h3><p>Skaller fra palmekerner, som ellers ikke bruges, bliver til biokul.</p></div>
+        <div class="fact"><span class="fact-n">2</span><h3>Bedre jord for landmanden</h3><p>Biokul hæver pH og holder på næring og vand i sandet jord.</p></div>
+        <div class="fact"><span class="fact-n">3</span><h3>Dokumenteret CO₂-fjernelse</h3><p>Hvert parti følges fra biomasse til mark, så kreditten kan efterprøves.</p></div>
+      </div>
+      <a href="#kredslob" class="btn">Se hvordan det hænger sammen</a>
+    </div>
+  </section>
+
+  <!-- 2. Kredsløbet -->
+  <section id="kredslob">
+    <div class="wrap">
+      <h2>Kredsløbet</h2>
+      <p class="lead">Palmeoliebønderne er både dem der leverer biomassen, og dem der får gavn af biokullet. Kreditterne er med til at betale for, at gødningen kan sælges billigt.</p>
+
+      <h3 class="flow-title">Det fysiske kredsløb i Nigeria</h3>
+      <ol class="flow loop">
+        <li><strong>Palmeoliebønder</strong><span>leverer skaller fra palmekerner</span></li>
+        <li><strong>Pyrolyse</strong><span>i ShenGaias anlæg</span></li>
+        <li><strong>Biokul og gødning</strong><span>blandes og pakkes</span></li>
+        <li><strong>Distribution</strong><span>gennem fx Feraj Ventures</span></li>
+        <li><strong>Bøndernes marker</strong><span>får biokul og gødning til jorden</span></li>
+      </ol>
+      <p class="loop-note">↺ Kredsløbet starter forfra hos de samme bønder</p>
+
+      <div class="soil">
+        <h4>Hvorfor biokul hjælper netop her</h4>
+        <p>Jorden i området er ofte sandet og sur, så næringen skylles væk. Biokul hæver jordens pH og holder på næring og fugt. Flere forskningsartikler peger i samme retning, og vi vil gerne undersøge det nærmere sammen med universiteter.</p>
+      </div>
+
+      <h3 class="flow-title">Værdikredsløbet</h3>
+      <ol class="flow value">
+        <li><strong>Dokumentation</strong><span>kulstoffet i hvert parti måles og spores</span></li>
+        <li><strong>CO₂-kreditter</strong><span>sælges til danske virksomheder</span></li>
+        <li><strong>Billigere gødning</strong><span>kreditindtægten holder prisen nede</span></li>
+        <li><strong>Lokal pulje</strong><span>10 % af indtægten investeres lokalt <em>(under afklaring)</em></span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 3. Samarbejdsmodellen -->
+  <section id="samarbejde" class="alt">
+    <div class="wrap">
+      <h2>Samarbejdsmodellen</h2>
+      <p class="lead">Vi bygger et konsortium, hvor hver partner bidrager med det, de allerede har, og får noget konkret igen. Find den rolle, der passer til jer.</p>
+      <div id="roller" class="roles"></div>
+
+      <div class="split">
+        <div>
+          <h3>Fordeling og gennemsigtighed</h3>
+          <p>Vi vil gerne undgå, at den lokale pulje ender hos få personer. Derfor arbejder vi på åbne kriterier for, hvordan puljen bruges, og det er et af de punkter, vi gerne vil have jeres input til.</p>
+        </div>
+        <div>
+          <h3>Næste skridt</h3>
+          <p>Hvis I kan se jer selv i en af rollerne, vil vi gerne tage en uforpligtende snak. Det kan føre til en hensigtserklæring eller deltagelse i et pilotprojekt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Dokumentation (MRV) -->
+  <section id="dokumentation">
+    <div class="wrap">
+      <h2>Sådan dokumenterer vi</h2>
+      <p class="lead">En CO₂-kredit er kun så troværdig som dokumentationen bag den. Følg et parti fra palmeskal til kredit, og se hvilke data vi registrerer undervejs.</p>
+      <p class="fiction">Fiktivt eksempel · Parti <span id="parti-id"></span></p>
+
+      <div class="stepper" id="stepper" role="tablist" aria-label="Trin i kæden"></div>
+
+      <article class="step-card" id="step-card" aria-live="polite"></article>
+
+      <div class="step-nav">
+        <button type="button" class="btn ghost" id="prev">← Forrige</button>
+        <button type="button" class="btn" id="next">Næste →</button>
+      </div>
+
+      <p class="small">I dag er det en illustration. På sigt kan det blive et rigtigt system, enten bygget af os eller i samarbejde med en platform til digital dokumentation af kreditter.</p>
+    </div>
+  </section>
+
+  <!-- 5. Din vurdering -->
+  <section id="vurdering" class="alt">
+    <div class="wrap">
+      <h2>Din vurdering</h2>
+      <p class="lead">Det tager 3-5 minutter. Vi spørger til din rolle, hvilke data du vil se for at stole på en kredit, hvor troværdigt det samlede billede virker, og om modellen er interessant for jer.</p>
+      <p class="small">Vi gemmer virksomhedsnavn, rolle og svar, men ingen navne på personer og ingen e-mails. Svarene bruges i vores bachelorprojekt og til at udvikle ShenGaia.</p>
+      <div id="form-holder" class="form-holder"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>ShenGaia · Prototype til bachelorprojekt på UCL, Innovation og Entrepreneurskab · Udviklet med hjælp fra Claude (Anthropic)</p>
+  </div>
+</footer>
+
+<script src="js/indhold.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
