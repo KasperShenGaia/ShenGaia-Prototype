@@ -5,6 +5,63 @@ window.SHENGAIA = {
   // Indsæt linket til Google Formen her (det fra "Send" -> "<>" -> src="..."). Tom = viser pladsholder.
   formUrl: "",
 
+  // Billeder i karrusellen øverst. Skift et billede ved at lægge filen i assets/billeder
+  // og rette "billede" herunder, fx "assets/billeder/palmekerner.jpg".
+  karrusel: [
+    {
+      billede: "assets/billeder/palmekerner.svg",
+      alt: "Skaller fra palmekerner",
+      titel: "Restprodukt bliver ressource",
+      tekst: "Skaller fra palmekerner, som i dag ikke bruges, bliver til biokul."
+    },
+    {
+      billede: "assets/billeder/biokul.svg",
+      alt: "Biokul på jorden",
+      titel: "Kulstof der bliver i jorden",
+      tekst: "Biokul binder kulstof i hundredvis af år, og hvert parti dokumenteres."
+    },
+    {
+      billede: "assets/billeder/landbrug.svg",
+      alt: "Mark med majs i Nigeria",
+      titel: "Bedre jord for landmanden",
+      tekst: "Biokul hæver pH og holder på næring og vand i den sandede jord."
+    }
+  ],
+
+  // Faserne i det animerede kredsløb. ikon kan være palme, saek, anlaeg, biokul, lastbil eller spire.
+  kredslob: [
+    {
+      ikon: "palme",
+      titel: "Palmeolieplantagen",
+      tekst: "Bønderne dyrker oliepalmer. Skallerne fra palmekernerne er et restprodukt, som de kan sælge til os."
+    },
+    {
+      ikon: "saek",
+      titel: "Indsamling",
+      tekst: "Skallerne indsamles og vejes hos bønderne, så hvert parti kan spores fra start."
+    },
+    {
+      ikon: "anlaeg",
+      titel: "Pyrolyse",
+      tekst: "Skallerne opvarmes med meget lidt ilt. Det giver biokul, og gassen bruges som energi til anlægget."
+    },
+    {
+      ikon: "biokul",
+      titel: "Biokul og gødning",
+      tekst: "Biokullet blandes til gødning. Kulstoffet måles og kan sælges som CO₂-kredit til danske virksomheder."
+    },
+    {
+      ikon: "lastbil",
+      titel: "Distribution",
+      tekst: "Gødningen sælges gennem lokale distributører som Feraj Ventures. Indtægten fra kreditterne holder prisen nede."
+    },
+    {
+      ikon: "spire",
+      titel: "Tilbage på marken",
+      tekst: "Gødningen spredes på bøndernes egne plantager. Jorden holder bedre på næring og vand, og kredsløbet starter forfra."
+    }
+  ],
+
   roller: [
     {
       id: "leverandor",

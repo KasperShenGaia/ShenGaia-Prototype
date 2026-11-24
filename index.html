@@ -27,16 +27,19 @@
 
   <!-- 1. Om ShenGaia -->
   <section id="om" class="hero">
-    <div class="wrap">
-      <p class="kicker">Partnerskabsoplæg</p>
-      <h1>Biokul der gør jorden bedre og binder CO₂</h1>
-      <p class="lead">ShenGaia er en dansk-nigeriansk virksomhed, der laver biokul og biokulbaseret gødning af restprodukter fra palmeolieproduktionen i Nigeria. Gødningen forbedrer landmændenes jord, og kulstoffet der bindes i jorden dokumenteres og sælges som CO₂-kreditter til danske virksomheder.</p>
-      <div class="facts">
-        <div class="fact"><span class="fact-n">1</span><h3>Restprodukt bliver ressource</h3><p>Skaller fra palmekerner, som ellers ikke bruges, bliver til biokul.</p></div>
-        <div class="fact"><span class="fact-n">2</span><h3>Bedre jord for landmanden</h3><p>Biokul hæver pH og holder på næring og vand i sandet jord.</p></div>
-        <div class="fact"><span class="fact-n">3</span><h3>Dokumenteret CO₂-fjernelse</h3><p>Hvert parti følges fra biomasse til mark, så kreditten kan efterprøves.</p></div>
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <p class="kicker">Partnerskabsoplæg</p>
+        <h1>Biokul der gør jorden bedre og binder CO₂</h1>
+        <p class="lead">ShenGaia er en dansk-nigeriansk virksomhed, der laver biokul og biokulbaseret gødning af restprodukter fra palmeolieproduktionen i Nigeria.</p>
+        <a href="#kredslob" class="btn">Se kredsløbet</a>
       </div>
-      <a href="#kredslob" class="btn">Se hvordan det hænger sammen</a>
+      <div class="carousel" id="carousel" aria-roledescription="karrusel">
+        <div class="slides" id="slides"></div>
+        <button type="button" class="car-btn car-prev" id="car-prev" aria-label="Forrige billede">‹</button>
+        <button type="button" class="car-btn car-next" id="car-next" aria-label="Næste billede">›</button>
+        <div class="dots" id="dots"></div>
+      </div>
     </div>
   </section>
 
@@ -46,15 +49,21 @@
       <h2>Kredsløbet</h2>
       <p class="lead">Palmeoliebønderne er både dem der leverer biomassen, og dem der får gavn af biokullet. Kreditterne er med til at betale for, at gødningen kan sælges billigt.</p>
 
-      <h3 class="flow-title">Det fysiske kredsløb i Nigeria</h3>
-      <ol class="flow loop">
-        <li><strong>Palmeoliebønder</strong><span>leverer skaller fra palmekerner</span></li>
-        <li><strong>Pyrolyse</strong><span>i ShenGaias anlæg</span></li>
-        <li><strong>Biokul og gødning</strong><span>blandes og pakkes</span></li>
-        <li><strong>Distribution</strong><span>gennem fx Feraj Ventures</span></li>
-        <li><strong>Bøndernes marker</strong><span>får biokul og gødning til jorden</span></li>
-      </ol>
-      <p class="loop-note">↺ Kredsløbet starter forfra hos de samme bønder</p>
+      <div class="cycle">
+        <div class="cycle-ring">
+          <svg id="cycle-svg" viewBox="-150 -10 740 470" role="img" aria-label="Kredsløbet fra palmeolieplantage til biokul og tilbage til marken"></svg>
+        </div>
+        <div class="cycle-panel" aria-live="polite">
+          <p class="cycle-count" id="cycle-count"></p>
+          <h3 id="cycle-title"></h3>
+          <p id="cycle-text"></p>
+          <div class="cycle-ctrl">
+            <button type="button" class="btn ghost" id="cycle-prev">←</button>
+            <button type="button" class="btn ghost" id="cycle-play">Pause</button>
+            <button type="button" class="btn ghost" id="cycle-next">→</button>
+          </div>
+        </div>
+      </div>
 
       <div class="soil">
         <h4>Hvorfor biokul hjælper netop her</h4>
